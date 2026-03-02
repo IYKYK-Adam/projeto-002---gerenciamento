@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+:root {
+    --cor0: #feffff;
+    --cor1: #FDF3CC;
+    --cor2: #F2B366;
+    --cor3: #A64732;
+    --cor4: #731810;
+    --cor5: #49416D;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(wallpaper2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: var(--fonte-padrao);
+    margin: 0;
+    height: 100vh;
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor3));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+header > img {
+    border-bottom: 10px;
+}
+
+main {
+    background-color: var(--cor0);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.432);
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 0px 0px 10px 10px;
+    min-width: 300px;
+    max-width: 900px;
+    text-align: center;
+}
+
+main h1, div h1 {
+    color: var(--cor4);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8em;
+    font-weight: bolder;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.btn {
+    background-color: #6c558b;
+    color: white;
+    padding: 12px;
+    border: none;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 350px;
+    margin: 0 auto;
+    transition: background-color 0.3s;
+    display: block;
+    text-align: left;
+}
+
+.btn_salvar {
+    background-color: #6c558b;
+    color: white;
+    padding: 12px;
+    border: none;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 350px;
+    margin: 0 auto;
+    transition: background-color 0.3s;
+    display: block;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: var(--cor5);
+}
+
+.btn-voltar {
+    background-color: #888;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    width: 200px;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn-voltar:hover {
+    background-color: #555;
+}
+
+.menu .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
+    padding: 5px;
+}
+
+footer a {
+    color: #d49fff;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #986cbb;
+}
+
+.container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--cor0);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    border-radius: 12px;
+}
+
+.container_tabela {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--cor0);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    border-radius: 12px;
+}
+
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: bold;
+    color: var(--cor3);
+    text-align: left;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.icon-btn {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Estilo para tabelas */
+.tabela {
+    width: 100%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    margin: 30px auto;
+    font-size: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    background-color: var(--cor0);
+}
+
+.tabela thead {
+    background-color: var(--cor3);
+    color: var(--cor0);
+    font-weight: bold;
+}
+
+.tabela th,
+.tabela td {
+    padding: 14px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabela tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabela tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s;
+}

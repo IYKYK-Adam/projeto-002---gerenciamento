@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Livros Emprestados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <header>
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo da Biblioteca" height="100">
+    </header>
+
+    <main>
+        <div class="tabela_container">
+            <h1>Livros Emprestados no Momento</h1>
+
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Usuário</th>
+                        <th>Data de Empréstimo</th>
+                        <th>Data de Devolução</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for emp in emprestimos %}
+                    <tr>
+                        <td>{{ emp[0] }}</td>
+                        <td>{{ emp[1] }}</td>
+                        <td>{{ emp[2] }}</td>
+                        <td>{{ emp[3] }}</td>
+                        <td>{% if emp[4] %}{{ emp[4] }}{% else %}N/A{% endif %}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <a href="{{ url_for('index') }}" class="btn-voltar">Voltar ao Menu</a>
+        </div>
+    </main>
+
+    <footer>
+        Site criado por Victor Adam, Maria Cirlayne e Ailane Marinho - mais detalhes na aba <a href="#">créditos.</a>
+    </footer>
+
+</body>
+</html>
+

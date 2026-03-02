@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Fazer Empréstimo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Realizar Empréstimo</h1>
+
+        <form class="formulario" action="{{ url_for('realizar_emprestimo') }}" method="POST">
+            <label for="usuario">ID do Usuário:</label>
+            <input type="text" id="usuario" name="usuario" placeholder="apenas números" required>
+
+            <label for="livro">ID do Livro:</label>
+            <input type="text" id="livro" name="livro" placeholder="apenas números" required>
+
+            <label for="data_emprestimo">Data do Empréstimo:</label>
+            <input type="date" id="data_emprestimo" name="data_emprestimo" required>
+            
+            <button type="submit" class="btn_salvar">
+                <img src="{{ url_for('static', filename='img/salvar.jpg') }}" alt="Ícone salvar" class="icon-btn">
+                Fazer Empréstimo
+            </button>
+        </form>
+
+        <a href="{{ url_for('index') }}" class="btn-voltar">Voltar ao Menu</a>
+    </div>
+
+    <footer>
+        Site criado por Victor Adam, Maria Cirlayne e Ailane Marinho - mais detalhes na aba 
+        <a href="#">créditos.</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steven Universe</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <picture>
+            <img src="{{ url_for('static', filename='img/logo.png') }}" width="300px" alt="Logo da biblioteca">
+        </picture>
+    </header>
+
+    <main>
+        <h1>SISTEMA DE GERENCIAMENTO DE LIVROS</h1>
+        <div class="menu">
+            <a href="{{ url_for('cadastrar_livro') }}" class="btn">
+                <img src="{{ url_for('static', filename='img/add.jpg') }}" alt="Novo Livro" class="icon">Cadastrar Novo Livro
+            </a>
+            <a href="{{ url_for('novo_usuario') }}" class="btn">
+                <img src="{{ url_for('static', filename='img/add.jpg') }}" alt="Novo Usuário" class="icon">Cadastrar Novo Usuário
+            </a>
+            <a href="{{ url_for('realizar_emprestimo') }}" class="btn">
+                <img src="{{ url_for('static', filename='img/add.jpg') }}" alt="Empréstimo" class="icon">Fazer Empréstimo
+            </a>
+            <a href="{{ url_for('devolucao') }}" class="btn">
+                <img src="{{ url_for('static', filename='img/dev.jpg') }}" alt="Devolução" class="icon">Realizar Devolução
+            </a>
+            <a href="{{ url_for('exibir_livros') }}" class="btn">
+                <img src="{{ url_for('static', filename='img/livro.jpg') }}" alt="Listar Livros" class="icon">Exibir Livros Cadastrados
+            </a>
+            <a href="{{ url_for('listar_usuarios') }}" class="btn">
+                <img src="{{ url_for('static', filename='img/usuario.png') }}" alt="Listar Usuários" class="icon">Exibir Usuários Cadastrados
+            </a>
+            <a href="{{ url_for('livros_emprestados') }}" class="btn">
+                <img src="{{ url_for('static', filename='img/emprest.jpg') }}" alt="Livros Emprestados" class="icon">Livros Emprestados no Momento
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        Site criado por Victor Adam, Maria Cirlayne e Ailane Marinho - mais detalhes na aba 
+        <a href="#">créditos.</a>
+    </footer>
+</body>
+</html>

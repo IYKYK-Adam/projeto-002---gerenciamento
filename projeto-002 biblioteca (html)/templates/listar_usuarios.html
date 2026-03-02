@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuários Cadastrados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container_tabela">
+        <h1>Usuários Cadastrados</h1>
+
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                    <th>CPF</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for usuario in usuarios %}
+                <tr>
+                    <td>{{ usuario[0] }}</td>
+                    <td>{{ usuario[1] }}</td>
+                    <td>{{ usuario[2] }}</td>
+                    <td>{{ usuario[3] }}</td>
+                    <td>{{ usuario[4] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="{{ url_for('index') }}" class="btn-voltar">Voltar ao Menu</a>
+    </div>
+
+    <footer>
+        Site criado por Victor Adam, Maria Cirlayne e Ailane Marinho - mais detalhes na aba 
+        <a href="#">créditos.</a>
+    </footer>
+</body>
+</html>

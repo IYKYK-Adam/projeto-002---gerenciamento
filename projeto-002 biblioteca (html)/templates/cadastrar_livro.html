@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Novo Livro</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastrar Novo Livro</h1>
+
+        <form class="formulario" action="{{ url_for('cadastrar_livro') }}" method="POST">
+            <label for="titulo">Título do livro:</label>
+            <input type="text" id="titulo" name="titulo" required>
+
+            <label for="autor">Autor(a):</label>
+            <input type="text" id="autor" name="autor" required>
+
+            <label for="editora">Editora:</label>
+            <input type="text" id="editora" name="editora" required>
+
+            <label for="data_publicacao">Data de publicação:</label>
+            <input type="date" id="data_publicacao" name="data_publicacao" required>
+
+            <button type="submit" class="btn_salvar">
+                <img src="{{ url_for('static', filename='img/salvar.jpg') }}" alt="Ícone salvar" class="icon-btn">
+                salvar livro
+            </button>
+        </form>
+
+        <a href="{{ url_for('index') }}" class="btn-voltar">Voltar ao Menu</a>
+    </div>
+
+    <footer>
+        Site criado por Victor Adam, Maria Cirlayne e Ailane Marinho - mais detalhes na aba 
+        <a href="#">créditos.</a>
+    </footer>
+</body>
+</html>

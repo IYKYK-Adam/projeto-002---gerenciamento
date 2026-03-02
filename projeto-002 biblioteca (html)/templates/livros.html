@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Livros Cadastrados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="container_tabela">
+        <h1>Livros Cadastrados</h1>
+
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Autor(a)</th>
+                    <th>Editora</th>
+                    <th>Data de Publicação</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for livro in livros %}
+                <tr>
+                    <td>{{ livro[0] }}</td>
+                    <td>{{ livro[1] }}</td>
+                    <td>{{ livro[2] }}</td>
+                    <td>{{ livro[3] }}</td>
+                    <td>{{ livro[4] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="{{ url_for('index') }}" class="btn-voltar">Voltar ao Menu</a>
+    </div>
+
+    <footer>
+        Site criado por Victor Adam, Maria Cirlayne e Ailane Marinho - mais detalhes na aba 
+        <a href="#">créditos.</a>
+    </footer>
+
+</body>
+</html>
